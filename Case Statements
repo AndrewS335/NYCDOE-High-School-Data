@@ -52,6 +52,7 @@ in this case statement we will classify "Manhattan" as "M", "Brooklyn" as "BK", 
 "Queens" as "Q", and "Bronx" as "BX". 
 
 SELECT 
+  School_name,
   Borough,
 CASE 
   WHEN Borough = 'MANHATTAN' THEN 'M'
