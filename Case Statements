@@ -1,1 +1,18 @@
+This is a continuation from the last file whereby I add on to the set of queries finding out datapoints for schools. The focus of this file is to offer a list of queries focusing only on case statements by using joins, aggregation functions, and sub-queries as well. This file contains multiple examples for each case statement example and I hope this helps in your journey of using case statements in different formats!
 
+The first case statement allows me to rank high schools based on their average advanced regents cohort rate. The ratings I will use for this case statement is "low rating" for schools whose advanced regents cohort rate is between 0.0 and 25.0, 'improving rate' for schools whose advanced regents cohort rate is between 25.1 and 50.0, "slightly improving rate" for schools whose advanced regents cohort rate is between 50.1 and 75.0, and "high rate" for all other schools who does not fit into the previous three categories, this is for schools with an advanced regents cohort rate of 75.1 or higher. 
+
+SELECT 
+  School_name,
+  __Advanced_Regents_of_Cohort,
+CASE 
+  WHEN __Advanced_Regents_of_Cohort between '0.0' and '25.0' THEN 'Low rate'
+  WHEN __Advanced_Regents_of_Cohort between '25.1' and '50.0' THEN 'Improving rate'
+  WHEN __Advanced_Regents_of_Cohort between '50.1' and '75.0' THEN 'Slightly improving rate'
+  WHEN __Advanced_Regents_of_Cohort between '75.0' and '90.0' THEN 'High rate'
+  ELSE 'Perfect rate' END AS Advanced_regents_rate
+ FROM `nycdoe-high-schools.2021_Graduation_Rates.2021_Graduation_Rates`
+ WHERE 
+  __Advanced_Regents_of_Cohort IS NOT NULL
+ORDER BY
+  __Advanced_Regents_of_Cohort ASC;
