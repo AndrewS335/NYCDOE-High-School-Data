@@ -6,6 +6,8 @@ This is a project repository containing SQL code specifically pulling data from 
 
 What inspired this project? I was thinking about an SQL project I could use NYCDOE datasets to analyze large trends across the largest education system in the United States with 1.1 million students. I wanted to focus on specifically high schools within New York City as this is an interesting area where many policies are developed to help prepare students for college readiness, college success, and career exploration. In fact, many nonprofits within New York City exist serving the high school student population within with the same areas listed above, as students often lack the resources necessary to improve their understanding of college or career choices post-graduation. In this analysis, I seek out to gain a holistic understanding to see where do the high school student population within New York City stand when it comes to these critical areas. 
 
+You can view my full dashboard using this link: https://public.tableau.com/shared/MJ2YRMY8J?:display_count=n&:origin=viz_share_link
+
 **Datasets
 For the datasets - I used information from three different datasets provided by the DOE InfoHUB and NYC Open Data.
 
